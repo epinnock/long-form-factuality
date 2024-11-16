@@ -32,6 +32,9 @@ from common import shared_config
 #     'claude_21',
 #     'claude_20',
 #     'claude_instant',
+#     'claude_35_sonnet',
+#     'gpt_4o-mini',
+#     'gpt_4o',
 # ]
 ################################################################################
 model_short = 'gpt_35_turbo'
