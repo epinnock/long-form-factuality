@@ -43,10 +43,10 @@ max_tokens = 512
 
 ################################################################################
 #                              SEARCH SETTINGS
-# search_type: str = Google Search API used. Choose from ['serper'].
+# search_type: str = Google Search API used. Choose from ['serper','searxng'].
 # num_searches: int = Number of results to show per search.
 ################################################################################
-search_type = 'serper'
+search_type = 'searxng'
 num_searches = 3
 
 ################################################################################
