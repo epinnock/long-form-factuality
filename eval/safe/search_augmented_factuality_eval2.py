@@ -6,11 +6,11 @@ from typing import Any, Optional
 
 # pylint: disable=g-bad-import-order
 from common import modeling
-from common import shared_config
+from eval.safe import config
 from common import utils
 from eval.safe import classify_relevance
 from eval.safe import get_atomic_facts
-from eval.safe import rate_atomic_fact_2
+from eval.safe import rate_atomic_fact_2 as rate_atomic_fact
 # pylint: enable=g-bad-import-order
 
 IRRELEVANT_LABEL = 'Irrelevant'
@@ -96,7 +96,7 @@ def classify_relevance_and_rate_single(
     sentence: str,
     atomic_fact: str,
     rater: modeling.Model,
-    search_type: str = 'serper',  # Add search_type parameter
+    search_type: str = config.search_type,  # Add search_type parameter
 ) -> tuple[CheckedStatement, dict[str, Any], dict[str, Any]]:
     """Classify relevance of and rate a single atomic fact."""
     is_relevant, self_contained_atomic_fact, revised_fact_dict = (
@@ -147,7 +147,7 @@ def classify_relevance_and_rate(
     response: str,
     sentences_and_atomic_facts: list[dict[str, Any]],
     rater: modeling.Model,
-    search_type: str = 'serper',  # Add search_type parameter
+    search_type: str = 'searxng',  # Add search_type parameter
 ) -> dict[str, Any]:
     """Classify relevance of and rate all given atomic facts."""
     checked_statements, revised_fact_dicts, past_steps_dicts = [], [], []
@@ -201,7 +201,7 @@ def main(
     prompt: str,
     response: str,
     rater: modeling.Model,
-    search_type: str = 'serper',  # Add search_type parameter
+    search_type: str = 'searxng',  # Add search_type parameter
 ) -> dict[str, Any]:
     """Main function to evaluate factuality of a response.
     
@@ -229,3 +229,6 @@ def main(
         **atomic_facts,
         **rating_result,
     }
+
+    if __name__ == '__main__':
+        main()

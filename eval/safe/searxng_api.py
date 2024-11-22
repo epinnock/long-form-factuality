@@ -74,6 +74,7 @@ class SearxNGAPI:
 
         response, num_fails, sleep_time = None, 0, 0
         search_url = f"{self.base_url}/search"
+        
 
         while not response and num_fails < max_retries:
             try:

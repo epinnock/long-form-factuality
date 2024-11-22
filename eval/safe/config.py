@@ -37,7 +37,7 @@ from common import shared_config
 #     'gpt_4o',
 # ]
 ################################################################################
-model_short = 'gpt_35_turbo'
+model_short = 'gpt_4o-mini'
 model_temp = 0.1
 max_tokens = 512
 

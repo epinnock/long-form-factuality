@@ -14,7 +14,7 @@
 """Shared configuration across all project code."""
 
 import os
-
+import dotenv
 
 ################################################################################
 #                         FORCED SETTINGS, DO NOT EDIT
@@ -30,6 +30,7 @@ import os
 # path_to_data: str = directory storing task information.
 # path_to_result: str = directory to output results.
 ################################################################################
+dotenv.load_dotenv()
 prompt_postamble = """\
 Provide as many specific details and examples as possible (such as names of \
 people, numbers, events, locations, dates, times, etc.)
@@ -37,6 +38,8 @@ people, numbers, events, locations, dates, times, etc.)
 openai_api_key = os.environ.get('OPEN_AI_KEY', '')
 anthropic_api_key = os.environ.get('ANTHROPIC_API_KEY', '')
 serper_api_key = ''
+searxng_api_key = os.environ.get('SEARXNG_API_KEY', '')
+searxng_url = os.environ.get('SEARXNG_URL', '')
 random_seed = 1
 model_options = {
     'gpt_4_turbo': 'OPENAI:gpt-4-0125-preview',
