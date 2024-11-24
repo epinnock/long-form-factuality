@@ -10,12 +10,12 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 setup(
     name="longfact",  # Replace with your preferred package name
     version="0.1.0",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Ejiroghene Pinnock",
+    author_email="epinnock@gmail.com",
     description="A short description of your package",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/longfact",
+    url="https://github.com/epinnock/longfact",
     packages=find_packages(exclude=["tests*", "venv*"]),
     classifiers=[
         "Development Status :: 3 - Alpha",
