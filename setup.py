@@ -11,7 +11,7 @@ setup(
     name="longfact",
     version="0.1.0",
     author="Your Name",
-    author_email="your.email@example.com",
+    author_email="epinnock@gmail.com",
     description="A short description of your package",
     long_description=long_description,
     long_description_content_type="text/markdown",
