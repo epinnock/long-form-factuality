@@ -15,7 +15,7 @@ setup(
     description="A short description of your package",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/longfact",
+    url="https://github.com/epinnock/long-form-factuality",
     packages=find_packages(include=['common', 'data_creation', 'datasets', 'eval', 'longfact', 'main']),
     package_dir={'': '.'},
     classifiers=[
