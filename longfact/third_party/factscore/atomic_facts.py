@@ -25,6 +25,7 @@ from nltk import tokenize
 import numpy as np
 import rank_bm25
 import spacy
+from importlib.resources import files
 
 # pylint: disable=g-bad-import-order
 from common import modeling
@@ -79,9 +80,7 @@ class AtomicFactGenerator(object):
   ):
     self.nlp = SPACY_MODEL
     self.is_bio = True
-    self.demon_path = os.path.join(
-        os.path.dirname(os.path.abspath(__file__)), 
-        demon_dir, 
+    self.demon_path = files('third_party.factscore.demos').joinpath(
         'demons.json' if self.is_bio else 'demons_complex.json'
     )
     self.other_lm = other_lm
