@@ -52,7 +52,7 @@ MONTHS = [
     ]
 ]
 SPACY_MODEL = spacy.load('en_core_web_sm')
-DEMON_DIR = 'third_party/factscore/demos/'
+DEMON_DIR = 'demos/'
 ATOMIC_FACT_INSTRUCTION = """\
 Instructions:
 1. You are given a sentence. Your task is to break the sentence down into a \
