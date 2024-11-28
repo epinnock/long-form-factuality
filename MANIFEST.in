@@ -1,0 +1,7 @@
+include LICENSE
+include README.md
+include requirements.txt
+recursive-include third_party/factscore/demos *
+recursive-include third_party/factscore/demos *.json
+recursive-include third_party/factscore/demos *.*
+include longfact/third_party/factscore/demos/*
