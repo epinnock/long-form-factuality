@@ -9,13 +9,13 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="longfact",  # Replace with your preferred package name
-    version="0.1.0",
-    author="Ejiroghene Pinnock",
-    author_email="epinnock@gmail.com",
+    version="0.1.1",
+    author="",
+    author_email="your.email@example.com",
     description="A short description of your package",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/epinnock/longfact",
+    url="https://github.com/epinnock/long-form-factuality",
     packages=find_packages(exclude=["tests*", "venv*"]),
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -30,4 +30,8 @@ setup(
     ],
     python_requires=">=3.7",
     install_requires=requirements,
+    package_data={
+        'third_party.factscore': ['demos/*']
+    },
+    include_package_data=True,
 )
